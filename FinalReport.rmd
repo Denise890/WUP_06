@@ -48,7 +48,8 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=RACE,y=prcnt*100,fill=BIGBANG)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
+
+This plot shows the most of the black people think the the Bigbang is false, and the white people are at about 50/50 with believing if it true or false. The other race has more people believing it's true.
 
 ### Numerical Descriptive Results
 
@@ -58,6 +59,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
+The numerical results show that about 80% of Black people do not believe in the Bigbang theory and whites are 50/50 in believing and not believing. The other race has a difference between black an white. 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -142,8 +144,10 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 
 ```
 ```{r}
-fisherXY(GSS$RACE,GSS$BIGBANG,printAll = T)
+fisherXY(GSS$RACE,GSS$BIGBANG)
 ```
+
+There is a significant difference between the value  of p on the chi squared test 
 
 # Discussion and Conclusion
 
